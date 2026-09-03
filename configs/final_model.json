@@ -1,0 +1,69 @@
+{
+  "name": "SEER",
+  "seeds": [1203, 1204, 1205],
+  "shared_longitudinal_training": {
+    "dim": 256,
+    "batch": 32,
+    "visit": 3,
+    "weight_decay": 0.000001,
+    "bce_weight": 0.7,
+    "soft_jaccard_weight": 0.2,
+    "pairwise_rank_weight": 0.02,
+    "epochs": 60,
+    "lr": 0.0002,
+    "early_stop_patience": 10,
+    "temporal_type": "mamba",
+    "med_temporal_type": "gru",
+    "patient_fusion_type": "sum",
+    "clinical_feature_mode": "none",
+    "ehr_graph_mode": "directed_weighted"
+  },
+  "dataset_structure_overrides": {"eicu": ["disable_procedure_branch"]},
+  "longitudinal_stage_b": {
+    "retrieval_mode": "paper_m3",
+    "retrieval_candidate_scope": "train_plus_own_history",
+    "retrieval_context_source": "static",
+    "retrieval_weight": 0.05,
+    "retrieval_copy_mode": "fixed_prob",
+    "retrieval_copy_weight": 0.05,
+    "retrieval_readout_mode": "logit_bias",
+    "retrieval_readout_weight": 0.02,
+    "freeze_base_for_retrieval_readout": true,
+    "paper_m3_topk": 20,
+    "paper_m3_clinical_weight": 0.0,
+    "paper_m3_dxproc_weight": 0.02,
+    "epochs": 12,
+    "lr": 0.001,
+    "early_stop_patience": 4
+  },
+  "checkpoint_roles": {
+    "stage_a.pth": "longitudinal shared backbone checkpoint",
+    "stage_b.pth": "longitudinal retrieval-readout checkpoint",
+    "seer_auxiliary_branch.model": "SEER auxiliary branch checkpoint"
+  },
+  "seer_auxiliary": {
+    "adapter": "baselines/seer_auxiliary_adapter.py",
+    "bundled_runtime": "src/seer_auxiliary_branch",
+    "dim": 64,
+    "dropout": 0.7,
+    "lr": 0.0005,
+    "coef": 2.5,
+    "target_ddi": 0.06,
+    "epochs": 40,
+    "early_stop": 30,
+    "target_start_visit": 1
+  },
+  "final_fusion": {
+    "score_longitudinal_weight": 0.3,
+    "score_auxiliary_weight": 0.7,
+    "count_longitudinal_weight": 0.4,
+    "count_auxiliary_weight": 0.6,
+    "count_offset": 1,
+    "ddi_decode": {"mode": "greedy", "penalty": 0.04, "candidate_window": 60}
+  },
+  "final_test_split_policy": {
+    "mimic-iii": "paper_protocol; no explicit split manifest",
+    "mimic-iv": "paper_protocol; no explicit split manifest",
+    "eicu": "configs/splits/eicu_seed{seed}_paper_filtered.json"
+  }
+}

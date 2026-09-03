@@ -1,0 +1,19 @@
+{
+  "aggregate_mean_sample_sd": {
+    "eicu": {
+      "f1": {"mean": 0.6888752704973736, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0012805949701771562},
+      "jaccard": {"mean": 0.5451565966415445, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0016168852934146125},
+      "prauc": {"mean": 0.8257779014159816, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.002049534190108221}
+    },
+    "mimic-iii": {
+      "f1": {"mean": 0.7248343132854121, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0008217151358272086},
+      "jaccard": {"mean": 0.577268829189437, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0009112625704006648},
+      "prauc": {"mean": 0.8177435898381162, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0004902345767708713}
+    },
+    "mimic-iv": {
+      "f1": {"mean": 0.6840618640430275, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.00034180785198325826},
+      "jaccard": {"mean": 0.5319517196661635, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.0005680056314152726},
+      "prauc": {"mean": 0.7797243779562071, "n": 3, "reporting": "mean +/- sample SD", "sample_sd": 0.000606826081540521}
+    }
+  }
+}

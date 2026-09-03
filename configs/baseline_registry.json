@@ -1,0 +1,37 @@
+{
+  "seer_auxiliary": {
+    "name": "SEER SEER auxiliary branch",
+    "availability": "bundled-adapted-runtime",
+    "source": "baselines/seer_auxiliary_adapter.py + src/seer_auxiliary_branch"
+  },
+  "leader": {
+    "name": "LEADER",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/liuqidong07/LEADER-pytorch"
+  },
+  "cognet": {
+    "name": "COGNet",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/BarryRun/COGNet"
+  },
+  "carmen": {
+    "name": "Carmen",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/bit1029public/Carmen"
+  },
+  "safedrug": {
+    "name": "SafeDrug",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/ycq091044/SafeDrug"
+  },
+  "gamenet": {
+    "name": "GAMENet",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/sjy1203/GAMENet"
+  },
+  "molerec": {
+    "name": "MoleRec",
+    "availability": "third-party-not-vendored",
+    "source": "https://github.com/yangnianzu0515/MoleRec"
+  }
+}

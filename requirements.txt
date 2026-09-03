@@ -1,0 +1,11 @@
+python-dateutil
+dill
+einops
+matplotlib
+numpy
+pandas
+pytest
+scikit-learn
+scipy
+torch>=2.6
+tqdm

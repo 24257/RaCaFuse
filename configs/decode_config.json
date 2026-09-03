@@ -1,0 +1,28 @@
+{
+  "configs": [
+    {
+      "alpha": 0.94,
+      "base_count_mode": "expected_jaccard_count",
+      "bias": -1.0,
+      "ddi_graph_weight": 0.0,
+      "ehr_graph_weight": 0.0,
+      "freq_weight": 0.11,
+      "graph_source": "hybrid",
+      "history_weight": 0.35,
+      "left": "configured",
+      "mode": "history_retrieval_freq_graph_rank_count_pair_mix",
+      "ratio": 1.02,
+      "retrieval_count_mode": "weighted_mean",
+      "retrieval_weight": 0.6,
+      "right": "previous_count_add_prob",
+      "seq_weight": 0.1,
+      "threshold": 0.3,
+      "thresholds": null,
+      "topk": 20,
+      "weight": 0.1
+    }
+  ],
+  "created_from": "frozen validation-selected decoder configuration",
+  "expected_validation_ja": 0.5785831510079452,
+  "note": "Fixed decoder config for clean validation/test evaluation of count_pair_mix best."
+}

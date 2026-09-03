@@ -1,0 +1,33 @@
+{
+  "model_name": "SEER released final-test model",
+  "source_results": "results/FINAL_TEST_RESULTS.json",
+  "source_mean_sd_csv": "results/test_results_mean_sd.csv",
+  "source_per_seed_csv": "results/test_results_per_seed.csv",
+  "prediction_root": "predictions/seer",
+  "reporting": {
+    "seeds": [1203, 1204, 1205],
+    "aggregation": "arithmetic mean over seeds",
+    "sample_sd": "ddof=1",
+    "paper_display": "percentage, two decimals"
+  },
+  "datasets": {
+    "mimic-iii": {
+      "display_name": "MIMIC-III",
+      "jaccard": {"mean": 0.577268829189437, "sample_sd": 0.0009112625704006648, "paper": "57.73 ± 0.09"},
+      "f1": {"mean": 0.7248343132854121, "sample_sd": 0.0008217151358272086, "paper": "72.48 ± 0.08"},
+      "prauc": {"mean": 0.8177435898381162, "sample_sd": 0.0004902345767708713, "paper": "81.77 ± 0.05"}
+    },
+    "mimic-iv": {
+      "display_name": "MIMIC-IV",
+      "jaccard": {"mean": 0.5319517196661635, "sample_sd": 0.0005680056314152726, "paper": "53.20 ± 0.06"},
+      "f1": {"mean": 0.6840618640430275, "sample_sd": 0.00034180785198325826, "paper": "68.41 ± 0.03"},
+      "prauc": {"mean": 0.7797243779562071, "sample_sd": 0.000606826081540521, "paper": "77.97 ± 0.06"}
+    },
+    "eicu": {
+      "display_name": "eICU",
+      "jaccard": {"mean": 0.5451565966415445, "sample_sd": 0.0016168852934146125, "paper": "54.52 ± 0.16"},
+      "f1": {"mean": 0.6888752704973736, "sample_sd": 0.0012805949701771562, "paper": "68.89 ± 0.13"},
+      "prauc": {"mean": 0.8257779014159816, "sample_sd": 0.002049534190108221, "paper": "82.58 ± 0.20"}
+    }
+  }
+}

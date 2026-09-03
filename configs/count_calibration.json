@@ -1,0 +1,44 @@
+{
+  "mimic-iii": {
+    "1203": {
+      "longitudinal": {"slope": 0.95, "intercept": -0.34999999999999787, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.9, "intercept": -1.1500000000000004, "med_dim": 131}
+    },
+    "1204": {
+      "longitudinal": {"slope": 0.95, "intercept": -0.4499999999999993, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.9, "intercept": -1.8500000000000014, "med_dim": 131}
+    },
+    "1205": {
+      "longitudinal": {"slope": 0.95, "intercept": -0.34999999999999787, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.9, "intercept": -2.0, "med_dim": 131}
+    }
+  },
+  "mimic-iv": {
+    "1203": {
+      "longitudinal": {"slope": 0.9, "intercept": 1.0, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.9, "intercept": -1.9000000000000021, "med_dim": 131}
+    },
+    "1204": {
+      "longitudinal": {"slope": 0.9, "intercept": 1.0, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.9, "intercept": -1.3499999999999996, "med_dim": 131}
+    },
+    "1205": {
+      "longitudinal": {"slope": 0.9, "intercept": 1.0, "med_dim": 131},
+      "seer_auxiliary": {"slope": 0.85, "intercept": -1.0999999999999979, "med_dim": 131}
+    }
+  },
+  "eicu": {
+    "1203": {
+      "longitudinal": {"slope": 0.7, "intercept": 3.200000000000001, "med_dim": 45},
+      "seer_auxiliary": {"slope": 0.65, "intercept": 3.8, "med_dim": 45}
+    },
+    "1204": {
+      "longitudinal": {"slope": 0.6, "intercept": 4.4, "med_dim": 45},
+      "seer_auxiliary": {"slope": 0.65, "intercept": 3.549999999999999, "med_dim": 45}
+    },
+    "1205": {
+      "longitudinal": {"slope": 0.7, "intercept": 3.1000000000000014, "med_dim": 45},
+      "seer_auxiliary": {"slope": 0.8, "intercept": 2.5999999999999996, "med_dim": 45}
+    }
+  }
+}
