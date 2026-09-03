@@ -1,6 +1,6 @@
 # Authorized Local Checkpoints
 
-Weights are excluded from the public package. Set `SEER_PRIVATE_ARTIFACT_ROOT` to the external authorized artifact tree described in `docs/security.md`. The paths below are relative to that private root.
+Weights are excluded from the public package. Set `SEER_PRIVATE_ARTIFACT_ROOT` to the external authorized artifact tree described in `data/README.md`. The paths below are relative to that private root.
 
 The final SEER release uses three checkpoint roles for every dataset and seed:
 

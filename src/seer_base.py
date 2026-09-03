@@ -2,7 +2,7 @@
 import torch;
 from torch import nn;
 
-# see docs/seer_base.md for details
+# See README.md for model usage.
 
 # class RMSNorm(nn.Module):
 #     def __init__(self,

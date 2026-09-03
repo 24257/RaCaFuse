@@ -103,7 +103,7 @@ def main() -> int:
             raise FileNotFoundError(manifest)
     if not args.dry_run:
         if not ddi_mask_path(args.dataset, args.seed).is_file() or not any(ehr_cache_path(args.dataset, args.seed).glob("*.pkl")):
-            raise FileNotFoundError("Frozen reference inputs are not public. Set SEER_PRIVATE_ARTIFACT_ROOT to your authorized local artifact tree; see docs/security.md.")
+            raise FileNotFoundError("Frozen reference inputs are not public. Set SEER_PRIVATE_ARTIFACT_ROOT to your authorized local artifact tree; see data/README.md.")
         seer_security.require_trusted_pickle()
         for name in ("records_final.pkl", "voc_final.pkl", "ddi_A_final.pkl", "ehr.pkl"):
             if not (data_root / name).is_file():
