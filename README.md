@@ -1,12 +1,10 @@
-# SEER: Implementation and Reproducibility Materials for Manuscript Submission
+# SEER
 
-本包为 SEER 的投稿配套实现与复现材料。
-
-This package provides the implementation and reproducibility materials accompanying the SEER manuscript submission.
+This repository contains the implementation of SEER for medication recommendation, including data preparation, training, and evaluation utilities.
 
 ## Public package boundary
 
-This public submission package excludes clinical prediction arrays, trained
+This repository excludes clinical prediction arrays, trained
 checkpoints and frozen graph/mask binaries. Keep those files outside the public
 folder and use only artifacts authorized under the source data agreements.
 See [security and local evaluation](docs/security.md) for paths and trust settings.
@@ -408,10 +406,6 @@ python scripts/evaluate.py --dataset eicu --seed 1203 --dry-run
 ## Hardware and Runtime
 
 Artifact verification and unit tests are CPU-friendly. Full preprocessing, training and nine-seed inference are substantially more expensive and depend on protected clinical datasets. The historical and fresh-acceptance runs used a CUDA-enabled PyTorch environment; the completed fresh acceptance covered **MIMIC-III seed1203 only** and should not be generalized into a claim that all nine dataset/seed combinations were freshly retrained.
-
-## Citation
-
-This manuscript is under submission. No publication venue or DOI is claimed in this package.
 
 ## Reproducibility Boundary
 

@@ -1,11 +1,10 @@
 # Public release and local artifacts
 
-This package provides the implementation and reproducibility materials accompanying
-the SEER manuscript submission. The public package contains source code, aggregate reference metrics, configuration
+This repository contains the implementation of SEER for medication recommendation,
+including source code, aggregate reference metrics, configuration
 and a synthetic fixture. It excludes individual clinical labels/predictions,
 trained checkpoints and frozen graph/mask binaries. Internal split indices are
 cohort positions, not original clinical identifiers; do not add an identifier map.
-No publication venue, acceptance, or DOI is claimed.
 
 Before distributing a directory or archive, run:
 
