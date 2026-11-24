@@ -1,9 +1,8 @@
-# SEER
+# RaCaFuse
 
-Implementation of SEER for medication recommendation, including data preparation,
-training, and evaluation utilities.
+Implementation of RaCaFuse for medication recommendation, including data preparation, training, and evaluation utilities.
 
-SEER combines a longitudinal branch with a medication recommendation auxiliary
+RaCaFuse combines a longitudinal branch with a medication recommendation auxiliary
 branch. Stage A trains the longitudinal backbone; Stage B refines its retrieval
 readout. Final predictions combine both branches with count calibration and
 DDI-aware decoding. Model settings are in [configs/final_model.json](configs/final_model.json).
@@ -14,7 +13,7 @@ Use Python 3.11 and install the dependencies:
 
 ```bash
 conda env create -f environment.yml
-conda activate seer
+conda activate RaCaFuse
 ```
 
 Alternatively, install [requirements.txt](requirements.txt) in a Python environment:
